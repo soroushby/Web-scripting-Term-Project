@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ModaSphere — Contact</title>
+    <meta
+      name="description"
+      content="Accessible contact form with jQuery Validate and a Leaflet map."
+    />
+
+    <!-- Plugins CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- CSS last -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="ModaSphere Home"
+          >ModaSphere</a
+        >
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav
+          id="site-nav"
+          class="site-nav"
+          role="navigation"
+          aria-label="Primary"
+          aria-hidden="true"
+        >
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+              <a href="contact.html" class="active" aria-current="page"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Contact</h1>
+          <p>
+            Accessible form validated with jQuery Validate. Map below shows our
+            demo location.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <div class="container">
+          <h2 id="contact-heading">Send a Message</h2>
+
+          <form id="contact-form" novalidate aria-describedby="contact-desc">
+            <p id="contact-desc" class="sr-only">
+              All fields are required unless marked optional.
+            </p>
+
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="topic"
+                >Topic <span class="muted">(optional)</span></label
+              >
+              <select id="topic" name="topic">
+                <option value="">Select a topic</option>
+                <option>Orders</option>
+                <option>Wholesale</option>
+                <option>Press</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                aria-required="true"
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <label class="checkbox">
+                <input
+                  type="checkbox"
+                  id="agree"
+                  name="agree"
+                  required
+                  aria-required="true"
+                />
+                <span>I agree to the privacy policy.</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Send</button>
+            </div>
+
+            <div id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="map-section" aria-labelledby="map2-heading">
+        <div class="container">
+          <h2 id="map2-heading">Visit Us</h2>
+          <div
+            id="map-contact"
+            class="map"
+            role="region"
+            aria-label="Interactive map showing our location"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> ModaSphere.</p>
+      </div>
+    </footer>
+
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

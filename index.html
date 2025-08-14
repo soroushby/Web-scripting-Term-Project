@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ModaSphere — Home</title>
+    <meta
+      name="description"
+      content="Responsive 3-page site demonstrating RWD and multiple JS/jQuery plugins."
+    />
+
+    <!-- Soroush Bayanati Term Project A01443649-->
+
+    <!-- Plugin CSS (base first) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!-- site CSS last so you can override plugin styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="ModaSphere Home"
+          >ModaSphere</a
+        >
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav
+          id="site-nav"
+          class="site-nav"
+          role="navigation"
+          aria-label="Primary"
+          aria-hidden="true"
+        >
+          <ul>
+            <li>
+              <a href="index.html" class="active" aria-current="page">Home</a>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <!-- Hero class about being responsive -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy" data-aos="fade-up">
+            <h1>Responsive Fashion Showcase</h1>
+            <p>
+              Clean, accessible, mobile-first website using multiple plugins:
+              slider, lightbox, filters, map, form validation, drag-drop, modal,
+              and scroll animations.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#" data-micromodal-trigger="info-modal"
+                >Open Modal</a
+              >
+              <a class="btn btn-outline" href="gallery.html">Explore Gallery</a>
+            </div>
+          </div>
+          <div class="hero-anim" aria-hidden="true">
+            <div
+              id="lottie-hero"
+              class="lottie-box"
+              title="Decorative animation"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slick Carousel for changing pictures -->
+      <section class="carousel-section" aria-labelledby="carousel-heading">
+        <div class="container">
+          <h2 id="carousel-heading">Featured Looks</h2>
+          <div
+            class="carousel"
+            role="region"
+            aria-label="Featured images carousel"
+          >
+            <div>
+              <img
+                src="assets/images/placeholder-1.svg"
+                alt="Featured image 1"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/images/placeholder-2.svg"
+                alt="Featured image 2"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/images/placeholder-3.svg"
+                alt="Featured image 3"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/images/placeholder-4.svg"
+                alt="Featured image 4"
+              />
+            </div>
+            <div>
+              <img
+                src="assets/images/placeholder-5.svg"
+                alt="Featured image 5"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MixItUp filter and sort and GLightbox -->
+      <section class="mixitup-section" aria-labelledby="filter-heading">
+        <div class="container">
+          <h2 id="filter-heading">Filter & Sort</h2>
+          <div class="controls" role="group" aria-label="Filter controls">
+            <button class="control" data-filter="all">All</button>
+            <button class="control" data-filter=".new">New</button>
+            <button class="control" data-filter=".sale">On Sale</button>
+            <button class="control" data-sort="default:asc">A→Z</button>
+            <button class="control" data-sort="default:desc">Z→A</button>
+          </div>
+          <div class="mixitup-container">
+            <div class="mix new" data-order="a">
+              <a href="assets/images/placeholder-2.svg" class="glightbox"
+                ><img src="assets/images/placeholder-2.svg" alt="New item 1"
+              /></a>
+            </div>
+            <div class="mix sale" data-order="b">
+              <a href="assets/images/placeholder-3.svg" class="glightbox"
+                ><img src="assets/images/placeholder-3.svg" alt="Sale item 2"
+              /></a>
+            </div>
+            <div class="mix new" data-order="c">
+              <a href="assets/images/placeholder-4.svg" class="glightbox"
+                ><img src="assets/images/placeholder-4.svg" alt="New item 3"
+              /></a>
+            </div>
+            <div class="mix sale" data-order="d">
+              <a href="assets/images/placeholder-5.svg" class="glightbox"
+                ><img src="assets/images/placeholder-5.svg" alt="Sale item 4"
+              /></a>
+            </div>
+          </div>
+          <p class="note" data-aos="fade-in">
+            Click any tile to open the image in a lightbox.
+          </p>
+        </div>
+      </section>
+
+      <!-- Sortable wishlist -->
+      <section class="wishlist-section" aria-labelledby="drag-heading">
+        <div class="container">
+          <h2 id="drag-heading">Drag & Drop Wishlist</h2>
+          <p>
+            Reorder items by dragging. Your sequence is announced for
+            accessibility.
+          </p>
+          <ul id="wishlist" class="wishlist" aria-live="polite">
+            <li tabindex="0">Leather Jacket</li>
+            <li tabindex="0">Silk Scarf</li>
+            <li tabindex="0">Denim Jeans</li>
+            <li tabindex="0">Chelsea Boots</li>
+          </ul>
+          <!-- live region added  -->
+        </div>
+      </section>
+
+      <!-- map showing -->
+      <section class="map-section" aria-labelledby="map-heading">
+        <div class="container">
+          <h2 id="map-heading">Store Locator</h2>
+          <div
+            id="map"
+            class="map"
+            role="region"
+            aria-label="Interactive map"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> ModaSphere. Built for RWD coursework.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Accessible Modal implemented -->
+    <div class="modal micromodal-slide" id="info-modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="info-modal-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="info-modal-title">About This Site</h2>
+            <button
+              class="modal__close"
+              aria-label="Close modal"
+              data-micromodal-close
+            ></button>
+          </header>
+          <main class="modal__content" id="info-modal-content">
+            <p>
+              This project demonstrates a 3-page responsive site with multiple
+              plugins
+            </p>
+          </main>
+          <footer class="modal__footer">
+            <button class="btn" data-micromodal-close>Close</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+
+    <!-- my JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ModaSphere — Gallery</title>
+    <meta
+      name="description"
+      content="Filtered lightbox gallery with scroll animations."
+    />
+
+    <!-- Plugins CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
+    <!--  CSS last -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="ModaSphere Home"
+          >ModaSphere</a
+        >
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav
+          id="site-nav"
+          class="site-nav"
+          role="navigation"
+          aria-label="Primary"
+          aria-hidden="true"
+        >
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="gallery.html" class="active" aria-current="page"
+                >Gallery</a
+              >
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" role="main">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Gallery</h1>
+          <p>Lightbox gallery with category filters and scroll animations.</p>
+        </div>
+      </section>
+
+      <section class="gallery-section" aria-labelledby="gal-heading">
+        <div class="container">
+          <h2 id="gal-heading">Browse Looks</h2>
+          <div class="controls" role="group" aria-label="Filter controls">
+            <button class="control" data-filter="all">All</button>
+            <button class="control" data-filter=".editorial">Editorial</button>
+            <button class="control" data-filter=".street">Street</button>
+          </div>
+
+          <div class="mixitup-container gallery-grid">
+            <div class="mix editorial" data-order="a" data-aos="fade-up">
+              <a
+                href="assets/images/placeholder-1.svg"
+                class="glightbox"
+                data-gallery="gal"
+              >
+                <img src="assets/images/placeholder-1.svg" alt="Editorial 1" />
+              </a>
+            </div>
+            <div
+              class="mix street"
+              data-order="b"
+              data-aos="fade-up"
+              data-aos-delay="50"
+            >
+              <a
+                href="assets/images/placeholder-2.svg"
+                class="glightbox"
+                data-gallery="gal"
+              >
+                <img src="assets/images/placeholder-2.svg" alt="Street 1" />
+              </a>
+            </div>
+            <div
+              class="mix editorial"
+              data-order="c"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <a
+                href="assets/images/placeholder-3.svg"
+                class="glightbox"
+                data-gallery="gal"
+              >
+                <img src="assets/images/placeholder-3.svg" alt="Editorial 2" />
+              </a>
+            </div>
+            <div
+              class="mix street"
+              data-order="d"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <a
+                href="assets/images/placeholder-4.svg"
+                class="glightbox"
+                data-gallery="gal"
+              >
+                <img src="assets/images/placeholder-4.svg" alt="Street 2" />
+              </a>
+            </div>
+            <div
+              class="mix editorial"
+              data-order="e"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <a
+                href="assets/images/placeholder-5.svg"
+                class="glightbox"
+                data-gallery="gal"
+              >
+                <img src="assets/images/placeholder-5.svg" alt="Editorial 3" />
+              </a>
+            </div>
+            <div
+              class="mix street"
+              data-order="f"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              <a
+                href="assets/images/placeholder-6.svg"
+                class="glightbox"
+                data-gallery="gal"
+              >
+                <img src="assets/images/placeholder-6.svg" alt="Street 3" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> ModaSphere.</p>
+      </div>
+    </footer>
+
+    <!-- Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
